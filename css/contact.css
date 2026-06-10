@@ -1,0 +1,88 @@
+/* css/contact.css — CTA form and footer */
+
+/* ── CTA ── */
+#cta { background: var(--navy-mid); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+.cta-inner {
+  max-width: 1200px; margin: 0 auto; padding: 6rem 4rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+}
+
+.cta-text h2 { margin-bottom: 1rem; }
+.cta-text p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+.cta-perks { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.8rem; }
+.cta-perk { display: flex; align-items: center; gap: 0.8rem; font-size: 0.88rem; color: var(--muted); }
+.cta-perk span { color: var(--teal); }
+
+.cta-form { display: flex; flex-direction: column; gap: 1rem; }
+.cta-form input,
+.cta-form textarea {
+  background: var(--navy); border: 1px solid var(--border); color: var(--white);
+  padding: 0.85rem 1.2rem; font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem; outline: none; transition: border-color 0.2s; width: 100%; resize: none;
+}
+.cta-form input::placeholder,
+.cta-form textarea::placeholder { color: var(--muted); }
+.cta-form input:focus,
+.cta-form textarea:focus { border-color: var(--teal); }
+
+#bw-status { font-size: 0.85rem; text-align: center; min-height: 1.4rem; margin-top: 0.2rem; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy); padding: 2.5rem 4rem;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;
+  border-top: 1px solid var(--border); position: relative; z-index: 1;
+}
+.footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--white); text-decoration: none; }
+.footer-logo span { color: var(--teal); }
+.footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+.footer-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+.footer-links a:hover { color: var(--teal); }
+.footer-copy { color: var(--muted); font-size: 0.78rem; }
+
+/* intl-tel-input fixes */
+.iti {
+    width: 100%;
+}
+
+.iti__flag {
+    background-image: url("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/img/flags.webp") !important;
+}
+
+.iti__flag.iti__globe {
+    background-image: url("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/img/globe.webp") !important;
+}
+
+/* .iti input {
+    width: 100% !important;
+}
+
+.iti__country-container {
+    z-index: 1000;
+}
+
+.iti--separate-dial-code .iti__selected-dial-code {
+    color: var(--white);
+}
+
+.iti__selected-country {
+    background: transparent !important;
+}
+
+.iti__country-list {
+    background: var(--navy-mid);
+    color: var(--white);
+    border: 1px solid var(--border);
+    z-index: 9999;
+} */
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .cta-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
+}
+
+@media (max-width: 600px) {
+  footer { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; }
+  .footer-links { gap: 1.2rem; }
+}

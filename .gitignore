@@ -1,0 +1,7 @@
+# Never commit real credentials
+.env
+
+# Editor / OS
+.DS_Store
+.vscode/
+node_modules/
